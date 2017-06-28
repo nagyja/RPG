@@ -1,3 +1,11 @@
+
+@media only screen and (min-width : 1600px){
+
+body{
+overflow-y: hidden;
+overflow-x: hidden;
+}
+
 #background {
     width: 100%; 
     height: 100%; 
@@ -15,8 +23,9 @@
 .jumbotron{
 	background-color: transparent;
 	color: white;
-	max-height: 400px;
+	height: 200px;
 	margin: 0;
+	padding: 0;
 }
 
 #heroStats{
@@ -24,6 +33,7 @@
 	color: white;
 	max-width: 80%;
 	font-size: 16px;
+	padding:10px;
 }
 
 #enemyStats{
@@ -31,6 +41,7 @@
 	color: white;
 	max-width: 80%;
 	font-size: 16px;
+	padding:10px;
 }
 
 #attackChoice{
@@ -48,48 +59,120 @@
 
 #obiWan{
 background-image : url(../images/obiWan.png);
-
+background-size: cover;
+max-width: 150px;
+height: 200px;
+margin: 0 100px 0 60px;
 }
 
 #anakin{
 background-image : url(../images/anakin.png);
-
-
+background-size: cover;
+max-width: 150px;
+height: 200px;
+margin: 0 60px 0 60px;
 }
 
 #mace{
 background-image : url(../images/mace.png);
-
+background-size: cover;
+max-width: 150px;
+height: 200px;
+margin: 0 60px 0 60px;
 }
 
 #yoda{
 background-image : url(../images/yoda.png);
-
+background-size: cover;
+max-width: 150px;
+height: 200px;
+margin: 0 60px 0 60px;
 }
 
 #maul{
 background-image : url(../images/maul.png);
-
+background-size: cover;
+max-width: 150px;
+height: 200px;
+margin: 0 60px 0 60px;
 }
 
 #dooku{
 background-image : url(../images/dooku.png);
-
+background-size: cover;
+max-width: 150px;
+height: 200px;
+margin: 0 60px 0 60px;
 }
 
 #vader{
 background-image : url(../images/vader.png);
-
+background-size: cover;
+max-width: 150px;
+height: 200px;
+margin: 0 60px 0 60px;
 }
 
 #palpatine{
 background-image : url(../images/palpatine.png);
+background-size: cover;
+max-width: 150px;
+height: 200px;
+margin: 0 60px 0 60px;
+}
+
+#playerBox{
+	position: absolute;
+    top: 30%;
+    left: 4%;
+	float:left;
+    height: 400px;
+    width: auto;
+}
+
+#enemyBox{
+	position: absolute;
+    top: 30%;
+    right: 4%;
+	float: right;
+	height: 400px;
+	width: auto;
+
 }
 
 
+.caption {
+    position: absolute;
+    top: 65%;
+    left: 4%;
+    max-width: 200px;
+    width: 200px;
+    text-align: center;
+    padding: 100px 20px 100px 20px;
+    background: rgba(74, 170, 165, 0.8);
+	font-family: "Georgia", Times, Times New Roman, serif;
+	color: #c69ae3;
+	font-size: 20px;
+	vertical-align: center;
+}
+
+.characterH{
+	margin-top: 10px;
+	margin-bottom: 120px;
+}
+
+.characterE{
+	margin-top: 100px;
+	margin-bottom: 100px;
+
+}
 
 #darthjarjar{
 background-image : url(../images/jarjar.jpg);
+background-size: cover;
+max-width: 150px;
+height: 200px;
+margin: 0 60px 0 60px;
 }
 
 .btn{
@@ -121,4 +204,5 @@ color:white;
     border-width: 3px 0px 0px 0px;
     border-color: red;
     opacity: 65%;
+}
 }

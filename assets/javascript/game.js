@@ -1,132 +1,117 @@
-var yoda = {
-	name: "Yoda",
-	"attackPriority" : 4,
-	"hitPoints" : 125,
-	"attackValue" : 2,
-	"defenseValue" : 4,
-	imageUrl : "../assets/images/yoda.png",
+var character = {
+	"yoda":{
+		name: "Yoda",
+		attackPriority: 4,
+		hitPoints: 125,
+		attackValue: 2,
+		defenseValue: 4,
+		imageUrl: "../assets/images/yoda.png"
+	},
+
+	"mace":{
+		name: "Mace Windu",
+		attackPriority: 1,
+		hitPoints: 175,
+		attackValue: 4,
+		defenseValue: 3,
+		imageUrl: "../assets/images/mace.png"
+	},
+
+	"anakin":{
+		name: "Anakin Skywalker",
+		attackPriority: 2,
+		hitPoints: 175,
+		attackValue: 3,
+		defenseValue: 3,
+		imageUrl:  "../assets/images/anakin.png"
+	},
+
+	"obiWan":{
+		name: "Obi Wan Kenobi",
+		attackPriority: 3,
+		hitPoints: 150,
+		attackValue: 3,
+		defenseValue: 3,
+		imageUrl : "../assets/images/obiWan.png"
+	},
+
+ 	"palpatine":{
+		name: "Emperor Palpatine",
+		attackPriority: 2,
+		hitPoints: 150,
+		attackValue: 4,
+		defenseValue: 3,
+		imageUrl: "../assets/images/palapatine.png"
+	},
+
+	 "dooku":{
+		name: "Count Dooku",
+		attackPriority: 2,
+		hitPoints: 175,
+		attackValue: 2,
+		defenseValue: 4,
+		imageUrl: "../assets/images/dooku.png"
+	},
+
+	"maul":{
+		name: "Darth Maul",
+		attackPriority: 4,
+		hitPoints: 150,
+		attackValue: 2,
+		defenseValue: 3,
+		imageUrl: "../assets/images/maul.png"
+	},
+
+	"vadar":{
+		name: "Darth Vader",
+		attackPriority: 1,
+		hitPoints: 175,
+		attackValue: 4,
+		defenseValue: 3,
+		imageUrl: "assets/images/vadar.png"
+	},
+};
+
+var playerCharacter;
+var currDefender;
+var enemyCharacters = [];
+var indexofSelChar;
+var attackResult;
+var turnCounter = 1;
+var killCount = 3;
+var playerHitPoints = 0;
+var enemyHitPoints = 0;
+
+
+
+//message instructions
+var intMessage = function(message) {
+	var startmessage = $("#instructions");
+    var newMessage = $("<div>").text(message);
+    instructionSet.append(newMessage);
+
+    if (message == 'clearMessage') {
+      instructionSet.text('');
+    }
 };
 
 
-var mace = {
-	name: "Mace Windu",
-	"attackPriority" : 1,
-	"hitPoints" : 175,
-	"attackValue" : 4,
-	"defenseValue" : 3,
-	imageUrl : "../assets/images/mace.png",
+function initialCharacter(chosenCharacter) {
+  character.name = chosenCharacter.name;
+  character.hitPoints = chosenCharacter.hitPoints;
+  character.attackPriority = chosenCharacter.attackPriority;
+  character.attackValue = chosenCharacter.attackValue;
+  character.defenseValue = chosenCharacter.defenseValue;
 };
 
-var anakin = {
-	name: "Anakin Skywalker",
-	"attackPriority" : 2,
-	"hitPoints" : 175,
-	"attackValue" : 3,
-	"defenseValue" : 3,
-	imageUrl : "../assets/images/anakin.png",
-};
-
-var obiWan = {
-	name: "Obi Wan Kenobi",
-	"attackPriority" : 3,
-	"hitPoints" : 150,
-	"attackValue" : 3,
-	"defenseValue" : 3,
-	imageUrl : "../assets/images/obiWan.png",
-};
-
-var palpatine = {
-	name: "Emperor Palpatine",
-	"attackPriority" : 2,
-	"hitPoints" : 150,
-	"attackValue" : 4,
-	"defenseValue" : 3,
-	imageUrl : "../assets/images/palapatine.png",
-};
-
-var dooku = {
-	name: "Count Dooku",
-	"attackPriority" : 2,
-	"hitPoints" : 175,
-	"attackValue" : 2,
-	"defenseValue" : 4,
-	imageUrl : "../assets/images/dooku.png",
-};
-
-var maul = {
-	name: "Darth Maul",
-	"attackPriority" : 4,
-	"hitPoints" : 150,
-	"attackValue" : 2,
-	"defenseValue" : 3,
-	imageUrl : "../assets/images/maul.png",
-};
-
-var vadar = {
-	name: "Darth Vader",
-	"attackPriority" : 1,
-	"hitPoints" : 175,
-	"attackValue" : 4,
-	"defenseValue" : 3,
-	imageUrl : "assets/images/vadar.png",
-};
-
-var darthJarJar = {
-	name: "Darth JarJar"
-	"attackPriority" : 4,
-	"hitPoints" : 200,
-	"attackValue" : 4,
-	"defenseValue" : 4,
-	imageUrl : "assets/images/JarJar.jpg",
-};
-
-
-window.onload = function() {
+//random darkside
 
 
 
-}
-//	Player selects characters
-//  computer selects characters
-//	stage set, characters moved into place
 
-  $(".character").on("click", function() {
-      $("#").html(headsCount);
-      $("#guess").html("<b>Heads</b>");
-      flipThatCoin(0);
-    });
-
-//  computer randomly selects attack
-var enemyAttack = enemyOptions[math.floor(math.random)];
-
-//  player selects attack
-$("button???").on("click", function(){
-
-}
-
-
-//  attacks are resolved in order of attack priority
-//  health is subtracted from the player and computer character
-//	repeats until player or computer health <= 0
-// 	message "Game Over! You lose" if player loses
-//	repeat from stage set
-
-
-//	defeat 3 enemies and message "You WIN!"
-var enemyCount = 3;
-
-if (enemyHealth <= 0){
-	enemyCount--;
-	if (enemyCount = 0) {
-//		return "You WIN"
-	}
-	else {
-// reset stage for next enemy		
-	}
-}
-
-
-
-	
-
-
+$("#obiWan").click(function(){
+      $("#lightside").hide();
+      document.querySelector("#playerName").innerHTML = "Obi Wan Kenobi";
+      document.querySelector("#hitPoint").innerHTML = "Hit Points: "
+      document.querySelector("#playerHealth").innerHTML = "obiWan.hitPoints"
+      });
