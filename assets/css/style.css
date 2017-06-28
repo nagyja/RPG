@@ -31,23 +31,29 @@ overflow-x: hidden;
 #heroStats{
 	background-color: blue;
 	color: white;
-	max-width: 80%;
+	max-width: 90%;
 	font-size: 16px;
-	padding:10px;
+	padding: 0 0 0 10px;
 }
 
 #enemyStats{
 	background-color: red;
 	color: white;
-	max-width: 80%;
+	max-width: 90%;
 	font-size: 16px;
-	padding:10px;
+	padding: 0 10px 0 0;
 }
 
 #attackChoice{
 	font-size: 15px;
 	margin-bottom: 10px;
+	color: red !important;
 }
+
+.attackBtn{
+	color: red !important;
+}
+
 .navbar-default{
 	margin-top: 10px;
 }
@@ -191,6 +197,7 @@ color:white;
 }
 
 
+
 #copyr{
 	text-align: center;
 	vertical-align: center !important;
@@ -205,4 +212,11 @@ color:white;
     border-color: red;
     opacity: 65%;
 }
+}
+
+@media only screen and (min-width : 600px){
+
+body{
+overflow-y: hidden;
+overflow-x: hidden;
 }
