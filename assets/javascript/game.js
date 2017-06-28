@@ -58,31 +58,38 @@ function randomEnemyfunction(){
 
 } 
 
-
-
 });
 
+var clicker = true;
 
 $("#obiWan").click(function(){
-	var obiWan={
-		name: "Obi Wan Kenobi",
-		attackPriority: 3,
-		hitPoints: 150,
-		attackValue: 3,
-		defenseValue: 3,
-		imageUrl : "../assets/images/obiWan.png"
-		}
-	
-		playerCharacter = obiWan.name;
-      	$("#lightside").hide();
-      	document.querySelector("#playerName").innerHTML = obiWan.name;
-      	document.querySelector("#playerHitPoint").innerHTML = "Hit Points: ";
-      	document.querySelector("#playerHealth").innerHTML = obiWan.hitPoints +"HP";
-      	randomEnemyCharacters(obiWan.name);
-       	});
+	if (clicker==false){
+    	e.stopPropagation();
+	};
+	else {
+		var obiWan={
+			name: "Obi Wan Kenobi",
+			attackPriority: 3,
+			hitPoints: 150,
+			attackValue: 3,
+			defenseValue: 3,
+			}
+			playerCharacter = obiWan.name;
+	      	$("#yoda").hide();
+	      	$("#mace").hide();
+	      	$("#anakin").hide();
+	      	document.querySelector("#playerName").innerHTML = obiWan.name;
+	      	document.querySelector("#playerHitPoint").innerHTML = "Hit Points: ";
+	      	document.querySelector("#playerHealth").innerHTML = obiWan.hitPoints +"HP";
+	      	randomEnemyCharacters(obiWan.name);
+	      	clicker=false;
+	      	};
 
 
 $("#anakin").click(function(){
+	if (clicker==false) {
+    e.stopPropagation();
+	};
 	var anakin={
 		name: "Anakin Skywalker",
 		attackPriority: 2,
@@ -92,12 +99,16 @@ $("#anakin").click(function(){
 		imageUrl:  "../assets/images/anakin.png"
 		}
 		playerCharacter = anakin.name;
-      	$("#lightside").hide();
+      	$("#yoda").hide();
+      	$("#mace").hide();
+      	$("#obiWan").hide();
       	document.querySelector("#playerName").innerHTML = anakin.name;
       	document.querySelector("#playerHitPoint").innerHTML = "Hit Points: ";
       	document.querySelector("#playerHealth").innerHTML = anakin.hitPoints +"HP";
       	randomEnemyCharacters(playerCharacter);
-      	});
+      	clicker=false;
+     });
+
 
 $("#yoda").click(function(){
 	var yoda={
@@ -109,12 +120,15 @@ $("#yoda").click(function(){
 		imageUrl: "../assets/images/yoda.png"
 		}
 		playerCharacter = yoda.name;
-      	$("#lightside").hide();
+      	$("#obiWan").hide();
+      	$("#mace").hide();
+      	$("#anakin").hide();
       	document.querySelector("#playerName").innerHTML = yoda.name;
       	document.querySelector("#playerHitPoint").innerHTML = "Hit Points: ";
       	document.querySelector("#playerHealth").innerHTML = yoda.hitPoints +"HP";
       	randomEnemyCharacters(playerCharacter);
       	});
+
 
 $("#mace").click(function(){
 	var mace={
@@ -126,13 +140,16 @@ $("#mace").click(function(){
 		imageUrl: "../assets/images/mace.png"
 		}
 		playerCharacter = yoda.name;
-      	$("#lightside").hide();
+      	$("#yoda").hide();
+      	$("#obiWan").hide();
+      	$("#anakin").hide();
       	document.querySelector("#playerName").innerHTML = mace.name;
       	document.querySelector("#playerHitPoint").innerHTML = "Hit Points: ";
       	document.querySelector("#playerHealth").innerHTML = mace.hitPoints +"HP";
       	randomEnemyCharacters(playerCharacter);
       	});
 	
+
 $("#palpatine").click(function(){
  	var palpatine={
 		name: "Emperor Palpatine",
@@ -143,14 +160,21 @@ $("#palpatine").click(function(){
 		imageUrl: "../assets/images/palapatine.png"
 		}
 		playerCharacter = palpatine.name;
-      	$("#lightside").hide();
+      	$("#dooku").hide();
+      	$("#vader").hide();
+      	$("#maul").hide();
       	document.querySelector("#playerName").innerHTML = palpatine.name;
       	document.querySelector("#playerHitPoint").innerHTML = "Hit Points: ";
       	document.querySelector("#playerHealth").innerHTML = palpatine.hitPoints +"HP";
       	randomEnemyCharacters(playerCharacter);
       	});
 
+
 $("#dooku").click(function(){
+	if (clicker==false){
+    e.stopPropagation();
+	};
+	else {
 	var dooku={
 		name: "Count Dooku",
 		attackPriority: 2,
@@ -160,12 +184,36 @@ $("#dooku").click(function(){
 		imageUrl: "../assets/images/dooku.png"
 		}
 		playerCharacter = dooku.name;
-      	$("lightside").hide();
+      	$("#palpatine").hide();
+      	$("#vader").hide();
+      	$("#maul").hide();
       	document.querySelector("#playerName").innerHTML = dooku.name;
       	document.querySelector("#playerHitPoint").innerHTML = "Hit Points: ";
       	document.querySelector("#playerHealth").innerHTML = dooku.hitPoints +"HP";
       	randomEnemyCharacters(playerCharacter);
+      	clicker=false;}
+      });
+
+
+$("#vader").click(function(){
+	var vader={
+		name: "Darth Vader",
+		attackPriority: 1,
+		hitPoints: 175,
+		attackValue: 4,
+		defenseValue: 3,
+		imageUrl: "../assets/images/vader.png"
+		}
+		playerCharacter = vader.name;
+      	$("#dooku").hide();
+      	$("#palpatine").hide();
+      	$("#maul").hide();
+      	document.querySelector("#playerName").innerHTML = vader.name;
+      	document.querySelector("#playerHitPoint").innerHTML = "Hit Points: ";
+      	document.querySelector("#playerHealth").innerHTML = vader.hitPoints +"HP";
+      	randomEnemyCharacters(playerCharacter);
       	});
+
 
 $("#maul").click(function(){
 	var maul={
@@ -177,26 +225,47 @@ $("#maul").click(function(){
 		imageUrl: "../assets/images/maul.png"
 		}
 		playerCharacter = maul.name;
-      	$("#lightside").hide();
+      	$("#dooku").hide();
+      	$("#vader").hide();
+      	$("#palpatine").hide();
       	document.querySelector("#playerName").innerHTML = maul.name;
       	document.querySelector("#playerHitPoint").innerHTML = "Hit Points: ";
       	document.querySelector("#playerHealth").innerHTML = maul.hitPoints +"HP";
       	randomEnemyCharacters(playerCharacter);
       	});
 
-$("#vader").click(function(){
-	var vadar={
-		name: "Darth Vader",
-		attackPriority: 1,
-		hitPoints: 175,
-		attackValue: 4,
-		defenseValue: 3,
-		imageUrl: "assets/images/vadar.png"
-		}
-		playerCharacter = vader.name;
-      	$("#lightside").hide();
-      	document.querySelector("#playerName").innerHTML = vader.name;
-      	document.querySelector("#playerHitPoint").innerHTML = "Hit Points: ";
-      	document.querySelector("#playerHealth").innerHTML = vader.hitPoints +"HP";
-      	randomEnemyCharacters(playerCharacter);
-      	});
+//  computer selects characters
+//	stage set, characters moved into place
+
+  $(".character").on("click", function() {
+      
+    });
+
+//  computer randomly selects attack
+var enemyAttack = enemyOptions[math.floor(math.random)];
+
+//  player selects attack
+$("button???").on("click", function(){
+
+}
+
+
+//  attacks are resolved in order of attack priority
+//  health is subtracted from the player and computer character
+//	repeats until player or computer health <= 0
+// 	message "Game Over! You lose" if player loses
+//	repeat from stage set
+
+
+//	defeat 3 enemies and message "You WIN!"
+var enemyCount = 3;
+
+if (enemyHealth <= 0){
+	enemyCount--;
+	if (enemyCount = 0) {
+//		return "You WIN"
+	}
+	else {
+// reset stage for next enemy		
+	}
+}
