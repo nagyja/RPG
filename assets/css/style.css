@@ -1,0 +1,124 @@
+#background {
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    left: 0px; 
+    top: 0px; 
+    z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */
+}
+
+.stretch {
+    width:100%;
+    height:100%;
+}
+
+.jumbotron{
+	background-color: transparent;
+	color: white;
+	max-height: 400px;
+	margin: 0;
+}
+
+#heroStats{
+	background-color: blue;
+	color: white;
+	max-width: 80%;
+	font-size: 16px;
+}
+
+#enemyStats{
+	background-color: red;
+	color: white;
+	max-width: 80%;
+	font-size: 16px;
+}
+
+#attackChoice{
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+.navbar-default{
+	margin-top: 10px;
+}
+
+#logo{
+	max-height: 200px;
+
+}
+
+#obiWan{
+background-image : url(../images/obiWan.png);
+
+}
+
+#anakin{
+background-image : url(../images/anakin.png);
+
+
+}
+
+#mace{
+background-image : url(../images/mace.png);
+
+}
+
+#yoda{
+background-image : url(../images/yoda.png);
+
+}
+
+#maul{
+background-image : url(../images/maul.png);
+
+}
+
+#dooku{
+background-image : url(../images/dooku.png);
+
+}
+
+#vader{
+background-image : url(../images/vader.png);
+
+}
+
+#palpatine{
+background-image : url(../images/palpatine.png);
+}
+
+
+
+#darthjarjar{
+background-image : url(../images/jarjar.jpg);
+}
+
+.btn{
+	width: 120px;
+	height: 120px;
+}
+
+h1, h2{
+color:white;
+}
+
+.list-group-item{
+	color:white;
+	background-color: transparent;
+	border-color: transparent;
+}
+
+
+#copyr{
+	text-align: center;
+	vertical-align: center !important;
+	font-size: 10px;
+	color:#4aaaa5;
+	width:100%;
+	background-color: #0f0909;
+	margin-bottom: 0px;
+	padding:10px;
+	border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    border-color: red;
+    opacity: 65%;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Starwars RPG game</title>
+
+ <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Added a link to Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+<div id="background">
+<img src="assets/images/mustafar.jpeg" class="stretch" alt="Mustafar">
+</div>
+<!--<iframe width="1152" height="698" src="http://play.starwars.com/html5/starwars_crawlcreator/?cid=null" frameborder="0" scrolling="no"></iframe>
+
+The SITH have once again shown themselves. The JEDI, caught off guard with the rising tensions of war throughout the REPUBLIC can only afford to dispatch a desperate response...
+
+The JEDI have heard rumors of a SITH temple on the distant volcanic world of Mustafar. The SITH will stop at nothing to see the end of the JEDI who stand as the last hope for the Republic.
+
+A fight is inevitable...
+-->
+
+<div class="jumbotron text-center">
+	<div class="row">
+		<div class="col-md-3 col-left" id="heroStats">
+			<div class="row">
+ 				<div class="col-md-4 col-left" id="playerName"></div>
+				<div class="col-md-4 col-center" id="hitPoint"></div>
+				<div class="col-md-2 col-right" id="playerHealth"></div>
+			</div>
+		</div>
+		<div class="col-md-6 col-center">
+			<div class="row">
+				<img id="logo" src="assets/images/star.png" alt="star wars logo">
+			</div>
+			<div class="row">
+				<h3 class="text-center" id="instructions"></h3>
+			</div>
+		</div>
+		<div class="col-md-3 col-right" id="enemyStats">
+			<div class="row">
+ 				<div class="col-md-4 col-left" id="enemyName"></div>
+				<div class="col-md-4 col-center" id="hitPoint"></div>
+				<div class="col-md-2 col-right" id="enemyHealth"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-3 character" id="obiWan"></div>
+		<div class="col-md-3 character" id="anakin"></div>
+		<div class="col-md-3 character" id="mace"></div>
+		<div class="col-md-3 character" id="yoda"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-3 character" id="maul"></div>
+		<div class="col-md-3 character" id="dukuu"></div>
+		<div class="col-md-3 character" id="vader"></div>
+		<div class="col-md-3 character" id="palpatine"></div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6" id="playerAvatar"></div>
+		<div class="col-md-6" id="enemyAvatar"></div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12" id="announce"></div>
+	<div>	
+<div>
+
+<!-- control bar -->
+<nav class="navbar navbar-default navbar-fixed-bottom" id="copyr">
+	<div class="container" id="attackChoice">Choose how to attack: </div>
+  	<div class="container">
+			<div class="col-md-3 attackBtn" id="heavyStrike"><button type="button" class="btn btn-primary">ATTACK</button></div>
+			<div class="col-md-3 attackBtn" id="parryStrike"><button type="	button" class="btn btn-warning">PARRY</button></div>
+			<div class="col-md-3 attackBtn" id="fullBlock"><button type="button" class="btn btn-danger">BLOCK</button></div>
+			<div class="col-md-3 attackBtn" id="swiftStrike"><button type="button" class="btn btn-secondary">SWIFT ATTACK</button></div>
+	</div>		
+	<div class="row">
+   		<div class="col-sm-12"><strong>&#169 Copyright Jeffrey Nagy 2017</strong>
+   		</div>
+  	</div>
+</nav>
+
+
+<!--
+
++Character select locations
++Character fighting locations
+-crawl
++Health counter
++5 buttons
+
+
+-->
+
+
+
+</body>
+</html>
+
+
+<!-- spots for all characters, enter code for Darth Jar Jar
+-2 enemies are randomly seleced and randomly assigned a fighting order, the #3 character is always a boss
+-screen is set for battle, clearing all character blocks except those that will fight; one enemy and the player's character are setup closer to each other
+
+	Combat:
+	-enemies' attack is selected and the player is asked to choose their attack; selection is locked
+	-attack priority is compared, highest attacks first;
+	-Attacker's attack is resolved and damage is deducted
+		-check if defender dies
+	-Defender's counter attack is resolved and damage is deducted
+		-check if attacker dies
+
+-Attack selections unlock.
+-COunter runs according to amount of damage done/ damage blocked; unlocks force powers accordingly.
+
+-remove enemy character when killed
+-set field for second battle
+
+-remove enemy character when killed
+-set field for third battle
+
+-if player loses "YOU LOSE and the Galaxy is lost... it is as if billions cried out and were in an instance silenced"
+
+-if player wins 
+	-ewok song plays 
+	-"...May the force be with you"
+
+
+HITPoint Tracking
+PlayerHP = 
