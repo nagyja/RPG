@@ -1,3 +1,28 @@
+//a message informing the player to select a character
+//character selection click -> lock out all other selections and hides them from display, loads the stats and characteristics unique to the selected character.
+//radndom selection of opponents from the opposite lightside/darkside affiliation, random order of oppoennts.
+//display larger images of the two characters that are fighting.
+//player clicks to select their mode of attack; random selection of opponent's mode of attack
+//attack priority as a combination of base stat and a modifier from the mode of attack compared between player and opponent's characters determine which character's attack is resolved first.
+//two declining counters track and display the remaining hit points of both characters.
+//fifth mode of attack "force power" unlocked based on the ammount of damage the playe or opponent have inflicted on the other.
+//if player hit points == zero, game over; "you lose"
+//if oppnent hit points == zero, "you defeated _____" ; on any key defeated opponent trackers are cleared and new opponent is rendedred from the predetermined randomized list.
+//maintain a count of remaining opponent characters, count declines with each defeated opponent
+//when remainting opponent characters = 0 , "you win"     
+//
+//modes of attack are buttons located across the bottom of the screen
+//5 modes of attack:
+//1. Attack - slight attack stat boost (do damage, take damage)
+//2. Parry - 50% defense stat increase, 50% attack stat decrease (take less damage, do less damage)
+//3. Block - doubles defense stat, significantly reduces attack stat (take low damage, do low damage)
+//4. Swift Attack - double attack priority, lower attack stat (attack first, do less damage)
+//5. Force Power - unlocked when enough damage has been caused against player or oppoenent; raise attack stat, opponents turn/counter attack skipped (do high damage , take no damage) 
+
+
+//I originally attempted this by using arrays, then switched to objects of objects, then swithced to more basic arrays.
+//this is all screwed up
+
 $(document).ready(function(){
 
 	
